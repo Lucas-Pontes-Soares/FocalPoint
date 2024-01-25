@@ -1,0 +1,23 @@
+.divButton{
+    text-align: center;
+}
+
+.button{
+    width: 450px;
+    height: 51px;
+    top: 594px;
+    left: 495px;
+    padding: 16px, 24px, 16px, 24px;
+    border-radius: 8px;
+    gap: 8px;
+    background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+    border: none;
+
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    text-align: center;
+}
