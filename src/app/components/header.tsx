@@ -19,7 +19,7 @@ export default function Header() {
             <img src="/images/logo.png" alt="" />
         </div>
         <div className={styles.column2}>
-            <h1 className={styles.welcome}>Bem-vindo de volta, Lucas</h1>
+            <h1 className={styles.welcome}><b>Bem-vindo de volta, Lucas</b></h1>
         </div>
         <div className={styles.column3}>
             <p className={styles.dateText}>{formattedDate}</p>

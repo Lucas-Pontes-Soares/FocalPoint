@@ -1,4 +1,5 @@
 import styles from '../styles/tarefas.module.css';
+import Task from './task';
 
 export default function Tarefas() {
     return(
@@ -6,10 +7,14 @@ export default function Tarefas() {
             <h3 className={styles.TitleText} >Suas tarefas de hoje</h3>
 
             {/* Adiconar Tarefas */}
+            <Task />
+            <Task />
 
-            <h3 className={styles.TitleText} >Tarefas finalizadas</h3>
-
+            <h3 className={styles.TitleTextFinished} >Tarefas finalizadas</h3>
+            
             {/* Adicionar Tarefas */}
+            <Task />
+            <Task />
         </div>
     )
 

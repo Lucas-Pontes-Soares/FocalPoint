@@ -1,0 +1,65 @@
+.container{
+    margin-top: 24px;
+    display: flex;
+    width: 386px;
+    min-height: 56px;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 16px;
+    border: 1px dashed  #D7DDE9
+}
+
+.container:hover{
+    cursor: pointer;
+    margin-top: 24px;
+    width: 386px;
+    min-height: 56px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 0px, 0px, 1px, 0px;
+    gap: 16px;
+    background: #F7F9FD;
+    border: 1px dashed  #F7F9FD
+}
+
+.checkbox{
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px;
+
+    background: linear-gradient(0deg, #D7DDE9, #D7DDE9),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #D7DDE9
+}
+
+.column1 {
+    flex: 1; 
+    text-align: left;
+}
+
+.column2{
+    flex: 10; 
+    text-align: left;
+}
+
+.column3{
+    flex: 1; 
+    text-align: right;
+}
+
+.taskTitle{
+    width: 274px;
+    height: 19px;
+    top: 18.5px;
+    left: 56px;
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #000000;
+
+}
