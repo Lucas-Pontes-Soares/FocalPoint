@@ -1,6 +1,5 @@
 .divHeader{
     display: flex;
-    flex-direction: column;
     border-bottom: 1px solid #D7DDE9;
     width: 1,328px;
     height: 60px;
@@ -52,6 +51,7 @@
 
 @media screen and (max-width: 400px) {
     .divHeader {
+        flex-direction: column;
         width: auto; 
         height: auto;
         text-align: left;
