@@ -7,6 +7,8 @@ import  { Task } from "./task";
 
 import TaskInterface from '../../app/interfaces/task';
 
+import { getTasks } from '../../app/services/taskService';
+
 interface TarefasProps {
     tasksPage: TaskInterface[];
 }
@@ -14,16 +16,23 @@ interface TarefasProps {
 export default function Tarefas({ tasksPage }: TarefasProps) {
     const [tasks, setTasks] = useState<TaskInterface[] | never[]>([]);
 
+    //toda vez que adicionar o tasks, reenderiza o componente
     useEffect(() => {
         setTasks(tasksPage);
-    }, [tasksPage]) //toda vez que adicionar o tasks, reenderiza o componente
+    }, [tasksPage]) 
 
-    //quando alterar o progresso da task vai atualizar a task
+    //quando alterar o progresso da task vai atualizar as tarefas
     const handleChangeTask = (taskId: number, newProgress: boolean) => {
         const updatedTasks = tasks.map((task) =>
           task.id === taskId ? { ...task, progress: newProgress } : task
         );
         setTasks(updatedTasks);
+    };
+
+     //quando deletar a task vai atualizar as tarefas
+    const handleUpdateTasks = () => {
+        const storedTasks = getTasks();
+        setTasks(storedTasks);
     };
 
     return(
@@ -40,6 +49,7 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                                 taskProgress={task.progress}
                                 taskDate={task.createdAt}
                                 onChange={handleChangeTask}
+                                onUpdateTasks={handleUpdateTasks}
                             />
                     : 
                         null
@@ -58,6 +68,7 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                                 taskProgress={task.progress}
                                 taskDate={task.createdAt}
                                 onChange={handleChangeTask}
+                                onUpdateTasks={handleUpdateTasks}
                             />
                     : 
                         null

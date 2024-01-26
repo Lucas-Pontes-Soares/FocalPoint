@@ -25,6 +25,7 @@ export function createTask(title: string){
     updateLocalStorage(storedTasks)
 }
 
+//função para trocar o progresso da task (feito = true)
 export function updateTaskProgress(taskTitle: string, id: number, createdAt: Date, newProgress: boolean){
     const storedTasks = getTasks();
 
@@ -38,6 +39,16 @@ export function updateTaskProgress(taskTitle: string, id: number, createdAt: Dat
       storedTasks.splice(Number(id)-1, 1, taskEditada)
       console.log("atualizou")
       updateLocalStorage(storedTasks);
+}
+
+//função para excluir a task
+export function deleteTask(taskId: number){
+    const storedTasks = getTasks();
+
+    const indexToRemove = storedTasks.findIndex(task => task.id === taskId);
+    storedTasks.splice(indexToRemove, 1);
+    console.log("deletou")
+    updateLocalStorage(storedTasks);
 }
 
 //funcao para atualizar o localStorage

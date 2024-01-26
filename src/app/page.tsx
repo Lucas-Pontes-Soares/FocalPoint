@@ -53,10 +53,12 @@ export default function Home() {
       </div>
 
       {isModalOpen && (
-        <NewTaskModal 
-          onClose={closeModal} 
-          onCreateTask={handleCreateTask} 
-        />
+        <div className={styles.modalBackground}>
+          <NewTaskModal 
+            onClose={closeModal} 
+            onCreateTask={handleCreateTask} 
+          />
+        </div>
       )}
     </div>
   );

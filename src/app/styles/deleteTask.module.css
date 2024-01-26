@@ -1,0 +1,76 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+
+    width: 450px;
+    min-height: 286px;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 32px;
+    box-shadow: 0px 24px 48px -12px #1018282E;
+}
+
+.modalTitle{
+    font-family: Inter Tight;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.description{
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #0000008A;
+}
+
+.divButtons{
+    margin-top: 32px;
+}
+.closeButton{
+    width: 185px;
+    min-height: 51px;
+    padding: 16px, 24px, 16px, 24px;
+    border-radius: 8px;
+    gap: 8px;
+    background: #E7EEFB;
+    border: none;
+    margin-right: 16px;
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+
+.deleteButton{
+    width: 185px;
+    min-height: 51px;
+    padding: 16px, 24px, 16px, 24px;
+    border-radius: 8px;
+    gap: 8px;
+    background: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+    border: none;
+
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
