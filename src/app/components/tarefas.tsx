@@ -39,7 +39,8 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
         <div className={styles.container}>
             
             <h3 className={styles.TitleText} >Suas tarefas de hoje</h3>
-            {tasks.map((task) => (
+            {tasks.length > 0 ? <div className={styles.tasksSpace}>
+                {tasks.map((task) => (
                 <div key={'divMap' + task.id}>
                     {task.progress === false ? 
                             <Task 
@@ -55,10 +56,17 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                         null
                     }
                 </div>
-            ))}
+            ))}  
+            </div> 
+            :
+            <div className={styles.semTarefas}>
+                <p className={styles.textoSemTarefas}>Não há tarefas para mostrar.</p>
+            </div>
+            }
 
             <h3 className={styles.TitleTextFinished} >Tarefas finalizadas</h3>
-            {tasks.map((task) => (
+            {tasks.length > 0 ? <div className={styles.tasksSpace}>
+                {tasks.map((task) => (
                 <div key={'divMap' + task.id}>
                     {task.progress === true ? 
                             <Task 
@@ -74,7 +82,13 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                         null
                     }
                 </div>
-            ))}
+            ))}  
+            </div> 
+            :
+            <div className={styles.semTarefas}>
+                <p className={styles.textoSemTarefas}>Não há tarefas para mostrar.</p>
+            </div>
+            }
 
         </div>
     )

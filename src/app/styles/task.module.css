@@ -10,7 +10,6 @@
 }
 
 .container:hover{
-    cursor: pointer;
     margin-top: 24px;
     width: 386px;
     min-height: 56px;
@@ -42,6 +41,8 @@
 .column2{
     flex: 10; 
     text-align: left;
+    justify-content: center;
+    align-self: center;
 }
 
 .column3{
@@ -89,4 +90,12 @@
     align-items: center;
     justify-content: center;
     z-index: 999; 
+}
+
+.lixeira:hover{
+    cursor: pointer;
+}
+
+.checkbox:hover{
+    cursor: pointer;
 }

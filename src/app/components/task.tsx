@@ -63,7 +63,12 @@ export const Task: React.FC<TaskProps> = ({ taskId, taskTitle, taskProgress, tas
                 }
             </div>
             <div className={styles.column3}>
-                <img src="/images/iconLixeira.png" alt="Icone para Excluir" onClick={() => openModal()} />
+                <img 
+                    className={styles.lixeira}
+                    src="/images/iconLixeira.png" 
+                    alt="Icone para Excluir" 
+                    onClick={() => openModal()} 
+                />
             </div>  
 
             {isModalOpen && (

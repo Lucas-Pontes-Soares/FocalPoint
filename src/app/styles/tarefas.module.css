@@ -32,3 +32,20 @@
     color: #0000008A;
     margin-top: 24px;
 }
+
+.semTarefas{
+    padding: 48px;
+}
+
+.tasksSpace{
+    min-height: 72px;
+}
+
+.textoSemTarefas{
+    font-family: Inter Tight;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #0000008A;
+}
