@@ -10,19 +10,34 @@ export function getTasks(): Task[] {
 }
 
 //funcao de criar Task e atualizar no localStorage
-export function createTask(){
+export function createTask(title: string){
     const storedTasks = getTasks()
     
     const newTask: Task = {
       id: storedTasks.length + 1,
       createdAt: new Date(),
-      title: 'Fui terminado',
-      progress: true,
+      title: title,
+      progress: false,
     };
     
     storedTasks.push(newTask);
     
     updateLocalStorage(storedTasks)
+}
+
+export function updateTaskProgress(taskTitle: string, id: number, createdAt: Date, newProgress: boolean){
+    const storedTasks = getTasks();
+
+    const taskEditada: Task = {
+        id: id,
+        title: taskTitle,
+        createdAt: createdAt,
+        progress: newProgress
+      }
+
+      storedTasks.splice(Number(id)-1, 1, taskEditada)
+      console.log("atualizou")
+      updateLocalStorage(storedTasks);
 }
 
 //funcao para atualizar o localStorage

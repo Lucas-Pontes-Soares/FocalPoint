@@ -18,6 +18,14 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
         setTasks(tasksPage);
     }, [tasksPage]) //toda vez que adicionar o tasks, reenderiza o componente
 
+    //quando alterar o progresso da task vai atualizar a task
+    const handleChangeTask = (taskId: number, newProgress: boolean) => {
+        const updatedTasks = tasks.map((task) =>
+          task.id === taskId ? { ...task, progress: newProgress } : task
+        );
+        setTasks(updatedTasks);
+    };
+
     return(
         <div className={styles.container}>
             
@@ -30,6 +38,8 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                                 taskId={task.id} 
                                 taskTitle={task.title} 
                                 taskProgress={task.progress}
+                                taskDate={task.createdAt}
+                                onChange={handleChangeTask}
                             />
                     : 
                         null
@@ -46,6 +56,8 @@ export default function Tarefas({ tasksPage }: TarefasProps) {
                                 taskId={task.id} 
                                 taskTitle={task.title} 
                                 taskProgress={task.progress}
+                                taskDate={task.createdAt}
+                                onChange={handleChangeTask}
                             />
                     : 
                         null
