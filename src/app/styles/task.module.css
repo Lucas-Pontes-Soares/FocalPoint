@@ -20,18 +20,6 @@
     border: 1px dashed  #F7F9FD
 }
 
-.checkbox{
-    width: 24px;
-    height: 24px;
-    padding: 3px;
-    border-radius: 4px;
-    border: 1px;
-
-    background: linear-gradient(0deg, #D7DDE9, #D7DDE9),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    border: 1px solid #D7DDE9
-}
-
 .column1 {
     flex: 1; 
     text-align: left;

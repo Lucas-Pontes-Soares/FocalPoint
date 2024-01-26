@@ -12,3 +12,29 @@ body {
   overflow-x: hidden;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 24px;
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid #B0BBD1;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  transform: scale(0);
+  color: #0796D3;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked {
+  background-color:  #A0DCF6;
+  border: 1px solid #0796D3
+}
+

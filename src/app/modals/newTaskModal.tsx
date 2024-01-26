@@ -15,16 +15,19 @@ export const NewTaskModal: React.FC<ModalProps> = ({ onClose, onCreateTask }) =>
   };
 
   const handleSubmit = () => {
-    console.log(title);
-    onCreateTask(title);
-    onClose();
+    if(title){
+      onCreateTask(title);
+      onClose();
+    } else {
+      alert("Informe o titulo da tarefa!")
+    }
   };
 
   return (
       <div className={styles.container}>
         <h1 className={styles.modalTitle}>Nova Tarefa</h1>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Titulo</label>
           <input
             type="text"
@@ -33,17 +36,18 @@ export const NewTaskModal: React.FC<ModalProps> = ({ onClose, onCreateTask }) =>
             className={styles.InputTitle}
             value={title} 
             onChange={handleTitleChange}
+            required
           />
-        </form>
 
         <div className={styles.divButtons}>
           <button className={styles.closeButton} onClick={onClose}>
             Cancelar
           </button>
-          <button type="submit" className={styles.openButton} onClick={handleSubmit}>
+          <button type="submit" className={styles.openButton} >
             Adicionar
           </button>
         </div>
+        </form>
       </div>
   );
 };
