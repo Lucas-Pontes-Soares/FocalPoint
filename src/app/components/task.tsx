@@ -1,15 +1,29 @@
 import styles from '../styles/task.module.css';
 
-export default function Task() {
+interface TaskProps {
+    taskId: number;
+    taskTitle: string;
+    taskProgress: boolean;
+}
+
+export const Task: React.FC<TaskProps> = ({ taskId, taskTitle, taskProgress }) => {
     return(
         <div className={styles.container}>
             <div className={styles.column1}>
                 <div className={styles.teste}>
-                <input type="checkbox" id="progress" name="progress" className={styles.checkbox} />
+                {taskProgress === false ? 
+                    <input type="checkbox" id={`progress-${taskId}`} name="progress" className={styles.checkbox} />
+                :
+                    <input type="checkbox" id={`progress-${taskId}`} name="progress" className={styles.checkbox} defaultChecked />
+                }
                 </div>
             </div>
             <div className={styles.column2}>
-                <p className={styles.taskTitle} >Titulo da task</p>
+                {taskProgress === false ? 
+                    <p className={styles.taskTitle}> {taskTitle} </p> 
+                : 
+                    <p className={styles.taskTitleChecked}> {taskTitle} </p>
+                }
             </div>
             <div className={styles.column3}>
                 <img src="/images/iconLixeira.png" alt="" />
