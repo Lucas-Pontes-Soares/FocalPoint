@@ -1,5 +1,6 @@
 .divContainerTaferas{
     margin-top: 40px;
+    width: 386px;
 }
 
 .divContainerBotao{
@@ -17,4 +18,10 @@
     align-items: center;
     justify-content: center;
     z-index: 999; 
+}
+
+@media screen and (max-width: 400px) {
+    .divContainerTaferas{
+        width:  100%;
+    }
 }

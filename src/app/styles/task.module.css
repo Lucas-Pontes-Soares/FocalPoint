@@ -12,7 +12,6 @@
 .container:hover{
     margin-top: 24px;
     width: 386px;
-    min-height: 56px;
     padding: 16px;
     border-radius: 8px;
     border: 0px, 0px, 1px, 0px;
@@ -39,7 +38,7 @@
 }
 
 .column2{
-    flex: 10; 
+    flex: 2; 
     text-align: left;
     justify-content: center;
     align-self: center;
@@ -98,4 +97,26 @@
 
 .checkbox:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        width: 224px;
+    }
+
+    .column2{
+        flex: 1; 
+    }
+
+    .container:hover{
+        width: 224px;
+    }
+
+    .taskTitle{
+        width: 112px;
+    }
+
+    .taskTitleChecked{
+        width: 112px;
+    }
 }

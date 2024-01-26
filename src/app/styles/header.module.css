@@ -1,5 +1,6 @@
 .divHeader{
     display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #D7DDE9;
     width: 1,328px;
     height: 60px;
@@ -47,4 +48,30 @@
     line-height: 19px;
     letter-spacing: -0.02em;
     color: #0000008A;
+}
+
+@media screen and (max-width: 400px) {
+    .divHeader {
+        width: auto; 
+        height: auto;
+        text-align: left;
+        align-items: start;
+        margin-top: 24px;
+        margin-left: 24px;
+        padding-bottom: 24px;
+    }
+
+    .column2 {
+    flex: 2; 
+    text-align: left;
+    }
+
+    .welcome {
+        font-family: Inter Tight;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: -0.02em;
+        font-weight: bold;
+    }
 }

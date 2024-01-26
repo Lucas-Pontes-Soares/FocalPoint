@@ -25,3 +25,9 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+    .button{
+        width: 272px;
+        margin-bottom: 41px;
+    }
+}
