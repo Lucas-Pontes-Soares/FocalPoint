@@ -89,18 +89,6 @@
         box-sizing: border-box; 
     }
 
-    .InputTitle{
-        width: 272px;
-        min-height: 51px;
-        padding: 16px;
-        border-radius: 8px;
-        border: 1px;
-        gap: 16px;
-        border: 1px solid #D7DDE9;
-        margin-top: 8px;
-        margin-bottom: 32px;
-    }
-
     .divButtons {
         display: flex;
         flex-direction: column-reverse;

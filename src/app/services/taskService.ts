@@ -37,7 +37,6 @@ export function updateTaskProgress(taskTitle: string, id: number, createdAt: Dat
       }
 
       storedTasks.splice(Number(id)-1, 1, taskEditada)
-      console.log("atualizou")
       updateLocalStorage(storedTasks);
 }
 
@@ -47,7 +46,6 @@ export function deleteTask(taskId: number){
 
     const indexToRemove = storedTasks.findIndex(task => task.id === taskId);
     storedTasks.splice(indexToRemove, 1);
-    console.log("deletou")
     updateLocalStorage(storedTasks);
 }
 

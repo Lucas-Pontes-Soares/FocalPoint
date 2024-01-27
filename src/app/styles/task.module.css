@@ -30,6 +30,7 @@
     text-align: left;
     justify-content: center;
     align-self: center;
+    height: auto;
 }
 
 .column3{
@@ -39,7 +40,7 @@
 
 .taskTitle{
     width: 274px;
-    height: 19px;
+    height: auto;
     top: 18.5px;
     left: 56px;
     font-family: Inter Tight;
@@ -53,7 +54,7 @@
 
 .taskTitleChecked{
     width: 274px;
-    height: 19px;
+    height: auto;
     top: 18.5px;
     left: 56px;
     font-family: Inter Tight;
@@ -62,7 +63,7 @@
     line-height: 19px;
     letter-spacing: -0.02em;
     text-align: left;
-    color: #000000;
+    color: #0000008A;
     text-decoration: line-through;
 }
 
@@ -90,6 +91,11 @@
 @media screen and (max-width: 400px) {
     .container{
         width: 224px;
+        margin-top: 8px;
+    }
+
+    .container:hover{
+        margin-top: 8px;
     }
 
     .column2{

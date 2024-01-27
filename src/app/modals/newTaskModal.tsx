@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 
 import styles from '../styles/newTask.module.css';
 
@@ -14,7 +14,9 @@ export const NewTaskModal: React.FC<ModalProps> = ({ onClose, onCreateTask }) =>
     setTitle(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     if(title){
       onCreateTask(title);
       onClose();
@@ -28,7 +30,7 @@ export const NewTaskModal: React.FC<ModalProps> = ({ onClose, onCreateTask }) =>
         <h1 className={styles.modalTitle}>Nova Tarefa</h1>
 
         <form onSubmit={handleSubmit}>
-          <label>Titulo</label>
+          <label className={styles.labelTitulo}>Titulo</label>
           <input
             type="text"
             name="title"

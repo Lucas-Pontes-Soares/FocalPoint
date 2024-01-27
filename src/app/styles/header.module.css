@@ -52,7 +52,7 @@
 @media screen and (max-width: 400px) {
     .divHeader {
         flex-direction: column;
-        width: auto; 
+        width: 272px; 
         height: auto;
         text-align: left;
         align-items: start;
@@ -62,8 +62,8 @@
     }
 
     .column2 {
-    flex: 2; 
-    text-align: left;
+        flex: 2; 
+        text-align: left;
     }
 
     .welcome {
